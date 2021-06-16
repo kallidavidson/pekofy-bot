@@ -26,11 +26,14 @@ def reply_f(reply, comment_obj, pekofy_msg=None):
 
     :param reply: the reply type to send
     :type reply: string
+    
     :param comment_obj: the comment to reply
     :type comment_obj: praw.models.Comment
+    
     :param pekofy_msg: pekofied message that should only be passed when the reply variable is 'pekofy' to
     pass the pekofied reply to the replies, defaults to None
     :type pekofy_msg: string
+    
     """
     replies["pekofy"]["message"] = pekofy_msg
     if pekofy_msg and is_triggering(pekofy_msg, "nothing changed"):
